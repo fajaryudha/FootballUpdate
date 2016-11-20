@@ -59,10 +59,6 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -75,6 +71,7 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new Home()).commit();
+
             // Handle the camera action
         } else if (id == R.id.nav_score) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new LiveScore()).commit();
