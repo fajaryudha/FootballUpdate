@@ -18,6 +18,10 @@
             android:id="@+id/nav_klasemen"
             android:icon="@drawable/juaraliga"
             android:title="Daftar Klasemen" />
+        <item
+            android:id="@+id/nav_tambah"
+            android:icon="@drawable/ic_add_black_24dp"
+            android:title="Tambah Berita" />
     </group>
 
 </menu>

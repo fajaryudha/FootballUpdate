@@ -79,6 +79,8 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.content_frame, new Jadwal()).commit();
         } else if (id == R.id.nav_klasemen) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new Klasemen()).commit();
+        } else if (id == R.id.nav_tambah){
+            fragmentManager.beginTransaction().replace(R.id.content_frame,new Upload()).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
