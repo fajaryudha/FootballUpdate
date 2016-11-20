@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "512891784001",
+    "firebase_url": "https://footballupdate2-d0081.firebaseio.com",
+    "project_id": "footballupdate2-d0081",
+    "storage_bucket": "footballupdate2-d0081.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512891784001:android:30bf9e9a9cdf3330",
+        "android_client_info": {
+          "package_name": "id.sch.smktelkom_mlg.xirpl302112029.footballupdate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "512891784001-soog1k60kd4eq5k55p9kmqbrqd14v27i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.sch.smktelkom_mlg.xirpl302112029.footballupdate",
+            "certificate_hash": "EE470D61C6DF7200ECFFB4D6C51C57A1DBAF5D82"
+          }
+        },
+        {
+          "client_id": "512891784001-m0dd2mkem1m37nq3hjo3o0dganm46l95.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvTGO2MeMMPEwBchpXne_3J6O-PNJSKwQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "512891784001-m0dd2mkem1m37nq3hjo3o0dganm46l95.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
