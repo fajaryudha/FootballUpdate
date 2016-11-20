@@ -17,6 +17,7 @@ public class Upload extends Fragment{
     Button upload;
     EditText title;
     EditText deskripsi;
+    String judul,des;
 
     @Nullable
     @Override
@@ -28,11 +29,11 @@ public class Upload extends Fragment{
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                judul = title.getText().toString();
+                des = deskripsi.getText().toString();
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("message");
-                myRef.setValue("Hello, World!");
-                myRef.setValue("Sett");
+                DatabaseReference myRef = database.getReference(judul);
+                myRef.child("deskripsi").setValue(des);
             }
         });
 
