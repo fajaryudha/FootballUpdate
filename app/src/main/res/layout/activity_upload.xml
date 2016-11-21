@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_upload"
     android:layout_width="match_parent"
@@ -39,9 +40,15 @@
         android:id="@+id/etDesciption" />
 
     <Button
-        android:text="Button"
+        android:text="Upload"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buttonUpload" />
+
+    <Button
+        android:text="Choose Image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonUImage" />
 
 </LinearLayout>
