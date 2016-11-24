@@ -39,23 +39,23 @@ public class Home extends Fragment{
         return myView;
     }
 
-    String java;
-    @Override
-    public void onStart() {
-        super.onStart();
+//    String java;
+//    @Override
+//    public void onStart() {
+//        super.onStart();
 
-        ValueEventListener postListener = new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                java = (String) dataSnapshot.getValue();
-                
-            }
+//        ValueEventListener postListener = new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                java = (String) dataSnapshot.getValue();
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Log.v("gagal","gagal");
-            }
-        };
-        myRef.addValueEventListener(postListener);
-    }
+//            }
+
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//                Log.v("gagal","gagal");
+//            }
+//        };
+//        myRef.addValueEventListener(postListener);
+//    }
 }

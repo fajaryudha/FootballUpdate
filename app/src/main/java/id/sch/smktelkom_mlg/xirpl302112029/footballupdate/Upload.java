@@ -47,6 +47,7 @@ public class Upload extends Fragment{
                 des = deskripsi.getText().toString();
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = database.getReference("Berita");
+                myRef.child(judul).child("Title").setValue(judul);
                 myRef.child(judul).child("Deskripsi").setValue(des);
             }
 
