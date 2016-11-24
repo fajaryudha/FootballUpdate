@@ -71,11 +71,11 @@
         <item>Cape Town, South Africa</item>
     </string-array>
     <array name="places_picture">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>@drawable/ic_home_black_24dp</item>
+        <item>@drawable/ic_home_black_24dp</item>
+        <item>@drawable/ic_home_black_24dp</item>
+        <item>@drawable/ic_home_black_24dp</item>
+        <item>@drawable/ic_home_black_24dp</item>
+        <item>@drawable/ic_home_black_24dp</item>
     </array>
 </resources>

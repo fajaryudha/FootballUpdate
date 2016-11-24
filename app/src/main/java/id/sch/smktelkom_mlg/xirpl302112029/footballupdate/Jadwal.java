@@ -10,9 +10,7 @@ import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
@@ -24,10 +22,10 @@ public class Jadwal extends Fragment {
     ArrayList<Pertandingan> mList = new ArrayList<>();
     PertandinganAdapter mAdapter;
     View myView;
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        myView = inflater.inflate(R.layout.jadwal, container,false);
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         RecyclerView recyclerView = (RecyclerView) myView.findViewById(R.id.recyclerViewJadwal);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this.getActivity());
         recyclerView.setLayoutManager(layoutManager);
@@ -35,10 +33,8 @@ public class Jadwal extends Fragment {
         recyclerView.setAdapter(mAdapter);
 
         fillData();
-        return myView;
     }
-
-    private void fillData() {
+    public void fillData() {
         Resources resources = getResources();
         String[] arJudul = resources.getStringArray(R.array.places);
         String[] arDeskripsi = resources.getStringArray(R.array.place_desc);
@@ -47,8 +43,7 @@ public class Jadwal extends Fragment {
 
         for (int i = 0; i < arFoto.length; i++) {
             BitmapDrawable bd = (BitmapDrawable) a.getDrawable(i);
-            RoundedBitmapDrawable rbd =
-                    RoundedBitmapDrawableFactory.create(getResources(), bd.getBitmap());
+            RoundedBitmapDrawable rbd = RoundedBitmapDrawableFactory.create(getResources(), bd.getBitmap());
             rbd.setCircular(true);
             arFoto[i] = rbd;
         }
