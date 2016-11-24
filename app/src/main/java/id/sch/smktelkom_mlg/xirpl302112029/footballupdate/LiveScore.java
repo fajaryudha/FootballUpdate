@@ -1,5 +1,6 @@
 package id.sch.smktelkom_mlg.xirpl302112029.footballupdate;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;

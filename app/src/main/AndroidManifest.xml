@@ -20,9 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Upload"></activity>
-        <activity android:name=".Galery"></activity>
-        <activity android:name=".Jadwal"></activity>
+        <activity android:name=".Upload" />
+        <activity android:name=".Galery" />
     </application>
 
 </manifest>
