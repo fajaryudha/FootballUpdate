@@ -1,10 +1,7 @@
 package id.sch.smktelkom_mlg.xirpl302112029.footballupdate;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentManager;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import id.sch.smktelkom_mlg.xirpl302112029.footballupdate.Activity.HomeActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -53,7 +52,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        android.app.FragmentManager fragmentManager=getFragmentManager();
+        android.app.FragmentManager fragmentManager =getFragmentManager();
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -70,7 +69,9 @@ public class MainActivity extends AppCompatActivity
         android.app.FragmentManager fragmentManager= getFragmentManager();
 
         if (id == R.id.nav_home) {
-            fragmentManager.beginTransaction().replace(R.id.content_frame, new Home()).commit();
+          Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+            startActivity(intent);
+            //  fragmentManager.beginTransaction().replace(R.id.content_frame, new Home()).commit();
 
             // Handle the camera action
         } else if (id == R.id.nav_score) {
@@ -78,7 +79,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_jadwal) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new Jadwal()).commit();
         } else if (id == R.id.nav_klasemen) {
-            fragmentManager.beginTransaction().replace(R.id.content_frame, new Klasemen()).commit();
+            Intent intent = new Intent(MainActivity.this, Klasemen.class);
+            startActivity(intent);
         } else if (id == R.id.nav_tambah){
             fragmentManager.beginTransaction().replace(R.id.content_frame,new Upload()).commit();
         }

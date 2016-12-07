@@ -39,16 +39,23 @@
         android:ems="10"
         android:id="@+id/etDesciption" />
 
-    <Button
-        android:text="Upload"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonUpload" />
+        android:orientation="horizontal">
+    <Button
+        android:text="Upload"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/buttonUpload"
+        android:layout_weight="1"/>
 
     <Button
         android:text="Choose Image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonUImage" />
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/buttonUImage"
+        android:layout_weight="1"/>
+    </LinearLayout>
 
 </LinearLayout>
