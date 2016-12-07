@@ -1,16 +1,19 @@
 package id.sch.smktelkom_mlg.xirpl302112029.footballupdate.Activity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.view.View;
+import android.webkit.WebView;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.ValueEventListener;
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.common.api.GoogleApiClient;
 
-import id.sch.smktelkom_mlg.xirpl302112029.footballupdate.R;
+import id.sch.smktelkom_mlg.xirpl302112029.footballupdate.*;
 
 /**
  * Created by Smktelkom on 11/24/2016.
@@ -18,19 +21,14 @@ import id.sch.smktelkom_mlg.xirpl302112029.footballupdate.R;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private DatabaseReference myRef;
-    private ValueEventListener mPostListener;
-    private TextView judul,des;
-
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
-        judul = (TextView) findViewById(R.id.textViewJudul);
-        CardView cardView = (CardView) findViewById(R.id.cv_Main);
-        cardView.setCardElevation(0.5f);
-        judul.setText("Fajar");
-
-
-
+        String url = "http://www.goal.com/id-ID/";
+        WebView view= (WebView) this.findViewById(R.id.webView);
+        view.getSettings().setJavaScriptEnabled(true);
+        view.loadUrl(url);
     }
 }
+

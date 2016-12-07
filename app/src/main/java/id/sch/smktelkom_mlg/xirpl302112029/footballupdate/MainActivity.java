@@ -11,6 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import id.sch.smktelkom_mlg.xirpl302112029.footballupdate.Activity.HomeActivity;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -67,7 +69,9 @@ public class MainActivity extends AppCompatActivity
         android.app.FragmentManager fragmentManager= getFragmentManager();
 
         if (id == R.id.nav_home) {
-            fragmentManager.beginTransaction().replace(R.id.content_frame, new Home()).commit();
+          Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+            startActivity(intent);
+            //  fragmentManager.beginTransaction().replace(R.id.content_frame, new Home()).commit();
 
             // Handle the camera action
         } else if (id == R.id.nav_score) {
@@ -75,7 +79,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_jadwal) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new Jadwal()).commit();
         } else if (id == R.id.nav_klasemen) {
-            fragmentManager.beginTransaction().replace(R.id.content_frame, new Klasemen()).commit();
+            Intent intent = new Intent(MainActivity.this, Klasemen.class);
+            startActivity(intent);
         } else if (id == R.id.nav_tambah){
             fragmentManager.beginTransaction().replace(R.id.content_frame,new Upload()).commit();
         }
